@@ -4,16 +4,16 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
+	font-family: "kepler-std",serif;
+	src: url("https://use.typekit.net/af/85aad1/000000000000000000013147/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3");
 	font-style: normal;
-
+	font-weight: 600;
 }
 
-
-
+@font-face {
+	font-family: 'Hind Siliguri', sans-serif;
+	src: url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Hind+Siliguri:wght@600&display=swap');
+}
 
 
 /**************/
@@ -27,31 +27,160 @@ button, summary {
 	cursor: pointer;
 }
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-main:#111;
-	--color-background:#eee;
+	--main-color:#111;
+	--background-color:#eee;
+	--cube-background:#ffffff;
+	--border-color: #000000;
+	--gradient: linear-gradient(
+		45deg,
+		#fbe4e4,
+		#f4dfeb,
+		#eae4f2,
+		#ddebf1,
+		#ddedea,
+		#fbf3db,
+		#faebdd
+
+	);
 }
-
-
-
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-main);
-  background-color:var(--color-background);
+  color:var(--main-color);
+  background-color:var(--background-color);
 }
 
-/* jouw code */
+/*********/
+/* Cubus */
+/*********/
 
+h2 {
+	font-family: "kepler-std",serif;
+	text-transform: uppercase;
+	width: 200px;
+	height: 200px;
+	margin: 30px;
+}
+
+h2 div span {
+	background-color: var(--cube-background);
+	position: absolute;
+ 	width: 200px;
+  	height: 200px;
+	border: var(--border-color) solid 1px;
+	font-size: 2.5em;
+
+/* Opzoeken!!!!! */
+	display:grid;
+	place-items:center;
+}
+
+h2 > div {
+	perspective: 800px;
+}
+
+h2 div > div {	
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	position: relative;
+
+	animation: rotate 6s linear;
+}
+
+h2 div:nth-of-type(1) {
+	width: 100%;
+  	height: 100%;
+  	transform-style: preserve-3d;
+}
+
+h2 div span:nth-of-type(1) {
+	transform: rotateY(  0deg) translateZ(100px);
+}
+
+h2 div span:nth-of-type(2) {
+	transform: rotateY( 90deg) translateZ(100px);
+}
+
+h2 div span:nth-of-type(3) {
+	transform: rotateY(180deg) translateZ(100px);
+}
+
+h2 div span:nth-of-type(4) {
+	transform: rotateY(-90deg) translateZ(100px);
+}
+
+h2 div span:nth-of-type(5) {
+	transform: rotateX( 90deg) translateZ(100px);
+}
+
+h2 div span:nth-of-type(6) {
+	transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+		transform-origin: center;
+	}
+	20% {
+		transform: rotateY(-90deg);
+		transform-origin: center;
+    }
+	40% {
+		transform: rotateY(-180deg);
+		transform-origin: center;
+	}
+	60% {
+		transform: rotateY(-270deg);
+		transform-origin: center;
+	}
+	80% {
+		transform: rotateX(-90deg);
+		transform-origin: center;
+	}
+}
+
+/*********/
+/* Tekst */
+/*********/
+
+h2:nth-of-type(2) {
+	font-family: 'Hind Siliguri', sans-serif;
+	text-transform: none;
+
+	overflow: hidden;
+	border-right: .15em solid var(--main-color);
+	white-space: nowrap;
+	margin: 0 auto;
+	animation: 
+    typing 5s steps(50, end) 6s,
+    cursor .75s step-end infinite;
+}
+
+/* typing animatie */
+@keyframes typing {
+	0% { 
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+  
+/* cursor animatie */
+@keyframes cursor {
+	0%, 100% { 
+		border-color: transparent;
+	}
+	50% { 
+		border-color: var(--main-color); 
+	}
+  }
