@@ -32,22 +32,33 @@ button, summary {
 /*********************/
 :root {
 	--main-color:#111;
-	--background-color:#eee;
+	--background-color:#f3f3f3;
 	--cube-background:#ffffff;
 	--border-color: #000000;
-	--gradient: linear-gradient(
-		45deg,
-		#fbe4e4,
-		#f4dfeb,
-		#eae4f2,
-		#ddebf1,
-		#ddedea,
-		#fbf3db,
-		#faebdd
-
-	);
+	--red-color:#fbe4e4;
+	--pink-color:#f4dfeb;
+	--purple-color:#eae4f2;
+	--blue-color:#ddebf1;
+	--green-color:#ddedea;
+	--yellow-color:#fbf3db;
+	--orange-color: #faebdd;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-color:#f4f4f4;
+		--background-color: #171717;
+		--cube-background:#1f1f1f;
+		--border-color: #ffffff;
+		--red-color:#ffb8b8;
+		--pink-color:#ffbde2;
+		--purple-color:#cbaef0;
+		--blue-color:#a9d8ec;
+		--green-color:#a3e6d9;
+		--yellow-color:#ecd99d;
+		--orange-color: #f0c8a2;
+	}
+}
 
 /****************/
 /* JOUW STYLING */
@@ -64,9 +75,9 @@ body {
 h2 {
 	font-family: "kepler-std",serif;
 	text-transform: uppercase;
-	width: 200px;
-	height: 200px;
-	margin: 30px;
+	width: 12.5em;
+	height: 12.5em;
+	margin: 1.8em;
 }
 
 h2 div span {
@@ -74,12 +85,10 @@ h2 div span {
 	position: absolute;
  	width: 200px;
   	height: 200px;
-	border: var(--border-color) solid 1px;
-	font-size: 2.5em;
-
-/* Opzoeken!!!!! */
-	display:grid;
-	place-items:center;
+	border: var(--border-color) solid 0.04em;
+	font-size: 4em;
+	display: grid;
+	place-items: center;
 }
 
 h2 > div {
@@ -87,12 +96,12 @@ h2 > div {
 }
 
 h2 div > div {	
-	width: 200px;
-	height: 200px;
-	margin: 20px;
+	width: 12.5em;
+	height: 12.5em;
+	margin: 1.25em;
 	position: relative;
-
 	animation: rotate 6s linear;
+
 }
 
 h2 div:nth-of-type(1) {
@@ -154,21 +163,58 @@ h2 div span:nth-of-type(6) {
 
 h2:nth-of-type(2) {
 	font-family: 'Hind Siliguri', sans-serif;
+	font-size: 4em;
 	text-transform: none;
-
+	height: auto;
+	width: 0;
+	max-width: 5em;
 	overflow: hidden;
+	line-height: 2em;
 	border-right: .15em solid var(--main-color);
 	white-space: nowrap;
 	margin: 0 auto;
 	animation: 
-    typing 5s steps(50, end) 6s,
-    cursor .75s step-end infinite;
+    	typing 5s steps(50, end) 6s forwards,
+    	cursor .75s step-end infinite 6s;
+}
+
+h2:nth-of-type(2) span {
+	position: relative;
+	display: inline-block;
+	animation: 
+		wave 1s ease-in-out 10,
+		text-color 2s 5;
+	text-shadow: 0.01em 0.01em black;
+}
+
+h2:nth-of-type(2) span:nth-of-type(1) {
+	animation-delay: .5s;
+}
+
+h2:nth-of-type(2) span:nth-of-type(2) {
+	animation-delay: .6s;
+}
+
+h2:nth-of-type(2) span:nth-of-type(3) {
+	animation-delay: .7s;
+}
+
+h2:nth-of-type(2) span:nth-of-type(4) {
+	animation-delay: .8s;
+}
+
+h2:nth-of-type(2) span:nth-of-type(5) {
+	animation-delay: .9s;
+}
+
+h2:nth-of-type(2) span:nth-of-type(6) {
+	animation-delay: 1s;
 }
 
 /* typing animatie */
 @keyframes typing {
 	0% { 
-		width: 0;
+		width: 0%;
 	}
 	100% {
 		width: 100%;
@@ -184,3 +230,41 @@ h2:nth-of-type(2) {
 		border-color: var(--main-color); 
 	}
   }
+
+/* text wave animatie */
+@keyframes wave {
+	0%{
+	  transform: translateY(0em);
+	}
+	60%{
+	  transform: translateY(-0.6em);
+	}
+	100%{
+	  transform: translateY(0em);
+	}
+  }
+
+  /* tekst kleur animatie */
+@keyframes text-color {
+	0% {
+		color: var(--red-color);
+	}
+	15% {
+		color: var(--pink-color);
+	}
+	30% {
+		color: var(--purple-color);
+	}
+	45% {
+		color: var(--blue-color);
+	}
+	60% {
+		color: var(--green-color);
+	}
+	75% {
+		color: var(--yellow-color);
+	}
+	100% {
+		color: var(--orange-color);
+	}
+}

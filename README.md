@@ -14,9 +14,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
+  1. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms (kubus)
+  2. https://css-tricks.com/snippets/css/typewriter-effect/ (typewritter effect)
+  3. https://codepen.io/qrac/pen/MRPJLB (tekst wave)
 
 
 
@@ -32,10 +32,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Meer leren over animatie
+  - Kubus maken met css, en deze laten ronddraaiien.
  
 </details>
 
@@ -48,19 +46,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/hele-animatie.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/kubus.png" width="375px" alt="top">  
+  <img src="readme-images/tekst.png" width="375px" alt="top">
 
+  De kubus vind ik goed gelukt, en deze animeert ook heel mooi. In het echte Notion logo staat de kubus schijn en is de zijkant zwart, maar dat gaat nog iets te ver.
+  De tekst die wordt getypt is een heel leuk effect, en past goed bij Notion.
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <img src="readme-images/hele-animatie.png" width="375px" alt="bummer">
+
+  Graag wilde ik dat de kubus en de tekst naast elkaar kwamen te staan, maar dit lukt niet. Ik heb veel op internet gezocht en geprobeerd, maar ben er niet uitgekomen.
 </details>
 
 
