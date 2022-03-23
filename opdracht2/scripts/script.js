@@ -4,13 +4,9 @@ console.log("howdy");
 const URL = "https://uselessfacts.jsph.pl//random.json?language=en";
 
 //haal de lijst 'ul' op uit de html
-const list = document.querySelector('ul');
+const list = document.querySelector('ul.api');
 //haal de button op uit de html
-const button = document.querySelector('button');
-
-
-
-
+const buttonToverstok = document.querySelector('button.toverstok');
 
 /****************/
 /* VUL DE LIJST */
@@ -52,4 +48,17 @@ async function getData(URL) {
 /*********/
 // getAmiibo();
 
-button.addEventListener("click", getFacts);
+buttonToverstok.addEventListener("click", getFacts);
+
+
+
+
+// hamburger menu
+var buttonSter = document.querySelector("button.favorieten");
+
+function menuOpenDicht(){
+	var favorietenLijst = document.querySelector("ul.favorieten");
+	favorietenLijst.classList.toggle("toonMenu");
+}
+
+buttonSter.addEventListener("click", menuOpenDicht);

@@ -62,16 +62,13 @@ h1:hover {
     1px 4px 1px var(--color-3d-text),
     1px 5px 1px var(--color-3d-text),
     1px 6px 1px var(--color-3d-text),
-    /* 1px 7px 1px var(--color--),
-    1px 8px 1px var(--color--),
-    1px 9px 1px var(--color--),
-    1px 10px 1px var(--color--), */
-  1px 16px 6px var(--color-text-shadow),
-  1px 18px 10px var(--color-text-shadow),
-  1px 23px 35px var(--color-text-shadow),
-  1px 25px 60px var(--color-text-shadow);
+      1px 16px 6px var(--color-text-shadow),
+      1px 18px 10px var(--color-text-shadow),
+      1px 23px 35px var(--color-text-shadow),
+      1px 25px 60px var(--color-text-shadow);
 }
 
+/* Useless facts */
 ul {
   list-style: none;
   background-color: var(--color-ul-background);
@@ -88,28 +85,55 @@ ul {
 
 /* Ul empty state */
 ul:empty::after {
-	content:"Hé, een heel leeg lijstje. Druk eens op de knop";
+	content:"There's nothing to see here yet.... Press the wand to start!";
   font-size: 1.5em;
 }
 
 /* Toverhoed */
-img {
+body > img {
   width: 20em;
   position: fixed;
   bottom: 4em;
   left: calc(50% - 10em);
 }
 
-button {
+/* Toverstok */
+button.toverstok {
   position:fixed;
+  bottom: 7em;
+  left: calc(50% - 17em);
 	appearance:none;
 	border:none;
+  background: transparent;
 }
 
-/* Toverstok */
-button img{
-  width: 8em;
+button.toverstok > img{
+  width: 9em;
+}
+
+/* Favorites menu */
+ul.favorieten {
   position: fixed;
-  bottom: 7em;
-  left: calc(6% - 4em);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: purple;
+  transform: translateY(100%);
+}
+
+ul.favorieten.toonMenu {
+  transform: translateY(0);
+  transition: 0.5s;
+}
+
+button.favorieten {
+  position: fixed;
+  z-index: 100;
+  right: 1.5em;
+  bottom: 1.5em;
+}
+
+button.favorieten img{
+  width: 4em;
 }
