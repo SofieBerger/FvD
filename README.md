@@ -75,15 +75,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/storyboard.opdr2.jpg" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Javascript snappen & kunnen gebruiken
+  - Gebruik maken van een API
+  - Favorieten kunnen opslaan in een lijst
+  - Favorieten kunnen verwijderen
+  - Favorieten kunnen sorteren
 </details>
 
 

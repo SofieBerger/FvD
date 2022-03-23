@@ -4,54 +4,112 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
+	font-family: 'Source Sans Pro', sans-serif;
+	src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 }
-
-
-
-
 
 /**************/
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
 }
 
 button, summary {
 	cursor: pointer;
 }
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
 	--color-main:#111;
 	--color-background:#eee;
+  --color-main-text:#ffffff;
+  --color-3d-text:#919191;
+  --color-h1-background:#355070;
+  --color-ul-background:#f20089;
+  --color-text-shadow: rgba(16,16,16,0.4);
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
   color:var(--color-main);
   background-color:var(--color-background);
 }
 
-/* jouw code */
+h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--color-main-text);
+  text-align: center;
+  transition: 0.5s;
+  background-color: var(--color-h1-background);
+  height: 2.5em;
+}
 
+h1:hover {
+  text-shadow: 
+    1px 1px 1px var(--color-3d-text),
+    1px 2px 1px var(--color-3d-text),
+    1px 3px 1px var(--color-3d-text),
+    1px 4px 1px var(--color-3d-text),
+    1px 5px 1px var(--color-3d-text),
+    1px 6px 1px var(--color-3d-text),
+    /* 1px 7px 1px var(--color--),
+    1px 8px 1px var(--color--),
+    1px 9px 1px var(--color--),
+    1px 10px 1px var(--color--), */
+  1px 16px 6px var(--color-text-shadow),
+  1px 18px 10px var(--color-text-shadow),
+  1px 23px 35px var(--color-text-shadow),
+  1px 25px 60px var(--color-text-shadow);
+}
+
+ul {
+  list-style: none;
+  background-color: var(--color-ul-background);
+  height: fit-content;
+  padding: 1.5em;
+  text-align: center;
+  align-content: center;
+  position: absolute;
+  top: 35%;
+  color: var(--color-main-text);
+  margin: auto;
+  width: auto;
+}
+
+/* Ul empty state */
+ul:empty::after {
+	content:"Hé, een heel leeg lijstje. Druk eens op de knop";
+  font-size: 1.5em;
+}
+
+/* Toverhoed */
+img {
+  width: 20em;
+  position: fixed;
+  bottom: 4em;
+  left: calc(50% - 10em);
+}
+
+button {
+  position:fixed;
+	appearance:none;
+	border:none;
+}
+
+/* Toverstok */
+button img{
+  width: 8em;
+  position: fixed;
+  bottom: 7em;
+  left: calc(6% - 4em);
+}
