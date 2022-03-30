@@ -32,6 +32,7 @@ button, summary {
   --color-h1-background:#355070;
   --color-ul-background:#f20089;
   --color-text-shadow: rgba(16,16,16,0.4);
+  --color-menu-background: #7209b7;
 }
 
 /****************/
@@ -68,25 +69,26 @@ h1:hover {
       1px 25px 60px var(--color-text-shadow);
 }
 
+h2 {
+  font-size: 1em;
+}
+
 /* Useless facts */
-ul {
+ul.api {
   list-style: none;
   background-color: var(--color-ul-background);
   height: fit-content;
   padding: 1.5em;
   text-align: center;
-  align-content: center;
   position: absolute;
   top: 35%;
   color: var(--color-main-text);
-  margin: auto;
-  width: auto;
 }
 
 /* Ul empty state */
-ul:empty::after {
+ul.api:empty::after {
 	content:"There's nothing to see here yet.... Press the wand to start!";
-  font-size: 1.5em;
+  /* font-size: 2em; */
 }
 
 /* Toverhoed */
@@ -112,28 +114,55 @@ button.toverstok > img{
 }
 
 /* Favorites menu */
-ul.favorieten {
+section.favorieten {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: purple;
+  background-color: var(--color-menu-background);
   transform: translateY(100%);
+  font-size: 2em;
+  color: var(--color-main-text);
+  text-align: center;
 }
 
-ul.favorieten.toonMenu {
-  transform: translateY(0);
+section.favorieten.toonMenu {
+  transform: translateY(15%);
   transition: 0.5s;
 }
 
-button.favorieten {
+button.star {
   position: fixed;
   z-index: 100;
   right: 1.5em;
   bottom: 1.5em;
+  border: none;
+  background: none;
 }
 
-button.favorieten img{
+button.star img{
   width: 4em;
+}
+
+.addToFaves {
+  position: fixed;
+  z-index: 100;
+  left: 1.5em;
+  bottom: 1.5em;
+  border: none;
+  background: none;
+}
+
+
+@media (min-width:32em) {
+
+}
+
+@media (min-width:40em) {
+
+}
+
+@media (min-width:60em) {
+
 }
