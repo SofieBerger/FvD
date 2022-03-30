@@ -1,0 +1,168 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'Source Sans Pro', sans-serif;
+	src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
+}
+
+button, summary {
+	cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	--color-main:#111;
+	--color-background:#eee;
+  --color-main-text:#ffffff;
+  --color-3d-text:#919191;
+  --color-h1-background:#355070;
+  --color-ul-background:#f20089;
+  --color-text-shadow: rgba(16,16,16,0.4);
+  --color-menu-background: #7209b7;
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+  color:var(--color-main);
+  background-color:var(--color-background);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--color-main-text);
+  text-align: center;
+  transition: 0.5s;
+  background-color: var(--color-h1-background);
+  height: 2.5em;
+}
+
+h1:hover {
+  text-shadow: 
+    1px 1px 1px var(--color-3d-text),
+    1px 2px 1px var(--color-3d-text),
+    1px 3px 1px var(--color-3d-text),
+    1px 4px 1px var(--color-3d-text),
+    1px 5px 1px var(--color-3d-text),
+    1px 6px 1px var(--color-3d-text),
+      1px 16px 6px var(--color-text-shadow),
+      1px 18px 10px var(--color-text-shadow),
+      1px 23px 35px var(--color-text-shadow),
+      1px 25px 60px var(--color-text-shadow);
+}
+
+h2 {
+  font-size: 1em;
+}
+
+/* Useless facts */
+ul.api {
+  list-style: none;
+  background-color: var(--color-ul-background);
+  height: fit-content;
+  padding: 1.5em;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  color: var(--color-main-text);
+}
+
+/* Ul empty state */
+ul.api:empty::after {
+	content:"There's nothing to see here yet.... Press the wand to start!";
+  /* font-size: 2em; */
+}
+
+/* Toverhoed */
+body > img {
+  width: 20em;
+  position: fixed;
+  bottom: 4em;
+  left: calc(50% - 10em);
+}
+
+/* Toverstok */
+button.toverstok {
+  position:fixed;
+  bottom: 7em;
+  left: calc(50% - 17em);
+	appearance:none;
+	border:none;
+  background: transparent;
+}
+
+button.toverstok > img{
+  width: 9em;
+}
+
+/* Favorites menu */
+section.favorieten {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-menu-background);
+  transform: translateY(100%);
+  font-size: 2em;
+  color: var(--color-main-text);
+  text-align: center;
+}
+
+section.favorieten.toonMenu {
+  transform: translateY(15%);
+  transition: 0.5s;
+}
+
+button.star {
+  position: fixed;
+  z-index: 100;
+  right: 1.5em;
+  bottom: 1.5em;
+  border: none;
+  background: none;
+}
+
+button.star img{
+  width: 4em;
+}
+
+.addToFaves {
+  position: fixed;
+  z-index: 100;
+  left: 1.5em;
+  bottom: 1.5em;
+  border: none;
+  background: none;
+}
+
+
+@media (min-width:32em) {
+
+}
+
+@media (min-width:40em) {
+
+}
+
+@media (min-width:60em) {
+
+}
