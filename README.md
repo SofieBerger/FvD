@@ -89,55 +89,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 </details>
 
 
-
-## Opdracht 2 test
-
-<details>
-  <summary>uitwerken na testen (week 6/7)</summary>
-
-  Neem minimaal 5 bevindingen op:
-
-
-
-  ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
-  #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
-  #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 3:
-  ...
-</details>
-
-
-
 ## Opdracht 2 reflectie
 
 <details>
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/Opdr.2-resultaat.png" width="375px" alt="uitkomst opdracht 2">
+    <img src="readme-images/Opdr.2-resultaat2.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
-
+  <img src="readme-images/Opdr.2-resultaatAPI.png" width="375px" alt="top">
+  Ik heb geleerd hoe ik data uit een API kan halen, en deze kan laten zien op de website.
+  <img src="readme-images/Opdr.2-resultaatClone.png" width="375px" alt="top">
+  Het toevoegen van de tekst uit de API in een favorieten lijst vond ik erg moeilijk, en hier heb ik hulp bij gehad.
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+<img src="readme-images/Opdr.2-resultaatKey.png" width="375px" alt="bummer">
+  Het is gelukt om met de enter knop elke keer een nieuwe fact te krijgen. Maar ik had dit ook graag willen doen voor alle andere knoppen. Zodat de hele website met het toetsenbord te bedienen is. 
 </details>
