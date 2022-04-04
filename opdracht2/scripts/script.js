@@ -124,7 +124,7 @@ var options = {
 /* Enter voor nieuwe fact */
 /**************************/
 document.addEventListener("keydown", (e) => { //e is parameter voor keyboard event
-	if (e.code === "Enter") { //als code Enter wordt ingedrukt voor je getfacts function uit
+	if (e.code === "Enter") { //als code Enter wordt ingedrukt voer je getfacts function uit
 	  getFacts();
 	}
   });
