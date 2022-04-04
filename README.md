@@ -17,6 +17,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms (kubus)
   2. https://css-tricks.com/snippets/css/typewriter-effect/ (typewritter effect)
   3. https://codepen.io/qrac/pen/MRPJLB (tekst wave)
+  4. https://codepen.io/ryandsouza13/pen/yEBJQV?editors=1100 (3d tekst)
 
 
 

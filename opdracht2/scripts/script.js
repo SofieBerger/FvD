@@ -1,5 +1,5 @@
 
-//API//
+//API ophalen//
 const URL = "https://uselessfacts.jsph.pl//random.json?language=en";
 
 //haal de lijst 'ul' op uit de html
@@ -7,13 +7,11 @@ const list = document.querySelector('ul.api');
 //haal de button op uit de html
 const buttonToverstok = document.querySelector('button.toverstok');
 
-
 /********************************/
 /* Nummer opgeslagen favorieten */
 /********************************/
 function calcFavNum (){
 	const favAr = document.getElementsByClassName("favItem");
-		// console.log('favAr length' + favAr.length);
 		var numberFav = document.querySelector(".numberFav"); 
 		numberFav.innerHTML = favAr.length; //
 	
@@ -22,15 +20,17 @@ function calcFavNum (){
 /***********************/
 /* Verwijder van lijst */
 /***********************/
-function removeMe(elem){
-	document.getElementById("myList1").removeChild(elem.parentNode);
+function removeMe(event){
+	var deLi = event.target.closest("li"); //opzoek naar eerste li
+	deLi.remove(); //verwijder de li
+
 	calcFavNum(); //function van de teller opnieuw uitvoeren
 }
 
 
-/****************/
-/* VUL DE LIJST */
-/****************/
+/********************/
+/* Api data ophalen */
+/********************/
 function getFacts() {
 
 	getData(URL).then(
@@ -82,17 +82,23 @@ function menuOpenDicht(){
 buttonStar.addEventListener("click", menuOpenDicht);
 
 
-/******************/
+/**************/
 /* Clone API */
-/******************/
+/**************/
 var addToFavesBtn = document.querySelector(".addToFaves");
 addToFavesBtn.addEventListener("click", () => { //anonieme functie
 
 	const myNode = document.querySelector(".textApi"); //tekst van de api ophalen
 	const liElement = document.createElement("li"); //maakt een li aan
 		liElement.classList.add("favItem")
+		liElement.innerHTML = myNode.textContent; //tekst kopieren
 
-	liElement.innerHTML = myNode.textContent + '<button class="removeBtn" onclick="removeMe(this)"> Remove </button>'; //veranderd html 
+		var deButton = document.createElement("button"); //remove button aanmaken
+		deButton.innerHTML = "Remove"; //tekst remove button
+		deButton.addEventListener("click", removeMe); //luisteren naar clicks en functie remove me uitvoeren
+
+	
+	liElement.appendChild(deButton);
 
 	document.getElementById("myList1").appendChild(liElement); //zet li element in favorieten lijst
  		calcFavNum ();
@@ -102,9 +108,10 @@ addToFavesBtn.addEventListener("click", () => { //anonieme functie
 /******************/
 /* Drag & drop */
 /******************/
+// Van een JS library
 var options = {
 	// de tijd van swappen in ms
-	animation: 1000
+	animation: 500
   }
   
   /* het daadwerkelijk initialiseren van het draggen-en-droppen */
@@ -112,3 +119,14 @@ var options = {
   // options - hierboven gedefinieerd
   var deLijst = document.getElementById('myList1');
   var sortable = Sortable.create(deLijst, options);
+
+/**************************/
+/* Enter voor nieuwe fact */
+/**************************/
+document.addEventListener("keydown", (e) => { //e is parameter voor keyboard event
+	if (e.code === "Enter") { //als code Enter wordt ingedrukt voor je getfacts function uit
+	  getFacts();
+	}
+  });
+
+

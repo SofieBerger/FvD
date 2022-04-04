@@ -33,10 +33,27 @@ button, summary {
   --color-ul-background:#f20089;
   --color-text-shadow: rgba(16,16,16,0.4);
   --color-menu-background: #7209b7;
+  --color-save-button: #023e8a;
+  --color-remove-button: #B24C63;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+    --color-main:rgb(255, 255, 255);
+    --color-background:rgb(89, 89, 89);
+    --color-main-text:#ffffff;
+    --color-3d-text:#919191;
+    --color-h1-background:#5a789d;
+    --color-ul-background:#f482c2;
+    --color-text-shadow: rgba(16,16,16,0.4);
+    --color-menu-background: #763c9d;
+    --color-save-button: #25579a;
+    --color-remove-button: #b63956;
+	}
 }
 
 /****************/
-/* JOUW STYLING */
+/* Mijn STYLING */
 /****************/
 body {
 	font-family: 'Source Sans Pro', sans-serif;
@@ -44,6 +61,7 @@ body {
   background-color:var(--color-background);
 }
 
+/* Titel "useless facts" */
 h1 {
   text-transform: uppercase;
   font-size: 3em;
@@ -52,7 +70,7 @@ h1 {
   text-align: center;
   transition: 0.5s;
   background-color: var(--color-h1-background);
-  height: 2.5em;
+  height: 1.5em;
 }
 
 h1:hover {
@@ -69,11 +87,14 @@ h1:hover {
       1px 25px 60px var(--color-text-shadow);
 }
 
+/* Titel "opgeslagen favorieten" */
 h2 {
-  font-size: 1em;
+  font-size: 0.9em;
+  font-weight: 500;
+  padding: 1em;
 }
 
-/* Useless facts */
+/* Api lijst*/
 ul.api {
   list-style: none;
   background-color: var(--color-ul-background);
@@ -83,12 +104,17 @@ ul.api {
   position: absolute;
   top: 35%;
   color: var(--color-main-text);
+  width: 100%;
 }
 
-/* Ul empty state */
+/* Api lijst empty state */
 ul.api:empty::after {
-	content:"There's nothing to see here yet.... Press the wand to start!";
-  /* font-size: 2em; */
+	content:"Press the wand to start, add your favorite facts to your wishlist with the save button!";
+}
+
+/* Tekst in de Api */
+p.textApi {
+  font-size: 1em;
 }
 
 /* Toverhoed */
@@ -113,7 +139,7 @@ button.toverstok > img{
   width: 9em;
 }
 
-/* Favorites menu */
+/* Favorieten menu */
 section.favorieten {
   position: fixed;
   width: 100%;
@@ -127,9 +153,13 @@ section.favorieten {
   text-align: center;
 }
 
+.favorieten {
+  overflow-y: scroll;
+}
+
 section.favorieten.toonMenu {
   transform: translateY(15%);
-  transition: 0.5s;
+  transition: 1s;
 }
 
 button.star {
@@ -145,24 +175,91 @@ button.star img{
   width: 4em;
 }
 
+/* Save button */
 .addToFaves {
+  font-size: 1em;
   position: fixed;
-  z-index: 100;
   left: 1.5em;
   bottom: 1.5em;
   border: none;
-  background: none;
+  border-radius: 0.5em;
+  background: var(--color-save-button);
+  color: var(--color-main-text);
+  width: 5em;
+  height: 2em;
 }
 
-
-@media (min-width:32em) {
-
+/* Tekst in favorieten menu */
+li.favItem {
+  font-size: 0.7em;
+  padding: 0.5em 1em;
 }
 
-@media (min-width:40em) {
+/* Remove button */
+.favItem button{
+  background-color: var(--color-remove-button);
+  border: none;
+  font-size: 0.7em;
+  border-radius: 0.1em;
+  color: var(--color-main-text);
+  margin-left: 0.5em;
+  height: 1.5em;
+  width: 5em;
+}
 
+/* Responsive */
+@media (min-width:38em) {
+  h1{
+    font-size: 4em;
+  }
+  ul.api {
+    font-size: 1.5em;
+  }
+  button.star img {
+    width: 8em;
+  }
+  button.addToFaves {
+    font-size: 1.5em;
+  }
+  section.favorieten.toonMenu {
+    transform: translateX(5%);
+    transform: translateY(20%);
+    transition: 1s;
+  }
+}
+
+@media (min-width:48em) {
+  h1{
+    font-size: 5em;
+  }
+  ul.api {
+    font-size: 1.8em;
+  }
+  button.star img {
+    width: 8.5em;
+  }
+  button.addToFaves {
+    font-size: 1.5em;
+  }
+  section.favorieten {
+    transform: translateX(100%);
+  }
 }
 
 @media (min-width:60em) {
-
+  h1{
+    font-size: 6em;
+  }
+  ul.api {
+    font-size: 2em;
+  }
+  button.star img {
+    width: 9em;
+  }
+  button.addToFaves {
+    font-size: 2em;
+  }
+  section.favorieten {
+    transform: translateX(100%);
+  }
 }
