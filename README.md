@@ -18,6 +18,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. https://css-tricks.com/snippets/css/typewriter-effect/ (typewritter effect)
   3. https://codepen.io/qrac/pen/MRPJLB (tekst wave)
   4. https://codepen.io/ryandsouza13/pen/yEBJQV?editors=1100 (3d tekst)
+  5. https://www.w3schools.com/howto/howto_js_remove_class.asp (feedback save button)
 
 
 
@@ -101,13 +102,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
+
   <img src="readme-images/Opdr.2-resultaatAPI.png" width="375px" alt="top">
   Ik heb geleerd hoe ik data uit een API kan halen, en deze kan laten zien op de website.
+  
   <img src="readme-images/Opdr.2-resultaatClone.png" width="375px" alt="top">
   Het toevoegen van de tekst uit de API in een favorieten lijst vond ik erg moeilijk, en hier heb ik hulp bij gehad.
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
+
 <img src="readme-images/Opdr.2-resultaatKey.png" width="375px" alt="bummer">
   Het is gelukt om met de enter knop elke keer een nieuwe fact te krijgen. Maar ik had dit ook graag willen doen voor alle andere knoppen. Zodat de hele website met het toetsenbord te bedienen is. 
 </details>

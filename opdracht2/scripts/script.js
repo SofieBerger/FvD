@@ -130,3 +130,15 @@ document.addEventListener("keydown", (e) => { //e is parameter voor keyboard eve
   });
 
 
+/*************************/
+/* Feedback saved button */
+/*************************/
+function myFunctionAdd() {
+	var element = document.getElementById("h3");
+	element.classList.add("mystyle");
+  }
+
+  function myFunctionRemove() {
+	var element = document.getElementById("h3");
+	element.classList.remove("mystyle");
+  }

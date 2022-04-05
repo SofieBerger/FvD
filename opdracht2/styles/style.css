@@ -59,6 +59,7 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
   color:var(--color-main);
   background-color:var(--color-background);
+  overflow-y: auto;
 }
 
 /* Titel "useless facts" */
@@ -98,7 +99,6 @@ h2 {
 ul.api {
   list-style: none;
   background-color: var(--color-ul-background);
-  height: fit-content;
   padding: 1.5em;
   text-align: center;
   position: absolute;
@@ -135,8 +135,23 @@ button.toverstok {
   background: transparent;
 }
 
+button.toverstok:focus {
+  outline: 0.1em solid #ffad32;
+  outline-offset: 0.1em;
+}
+
 button.toverstok > img{
   width: 9em;
+  animation: animationToverstok 1s infinite linear alternate;
+}
+
+@keyframes animationToverstok {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.1);
+	}
 }
 
 /* Favorieten menu */
@@ -171,6 +186,11 @@ button.star {
   background: none;
 }
 
+button.star:focus {
+  outline: 0.1em solid #ffad32;
+  outline-offset: 0.1em;
+}
+
 button.star img{
   width: 4em;
 }
@@ -189,6 +209,22 @@ button.star img{
   height: 2em;
 }
 
+.addToFaves:focus {
+  outline: 0.1em solid #ffad32;
+  outline-offset: 0.1em;
+}
+
+.addToFaves:active {
+  animation: animationSaveBtn 2s;
+  transition: 1s;
+}
+
+@keyframes animationSaveBtn {
+	0%, 100% {
+		background-color: green;
+  }
+}
+
 /* Tekst in favorieten menu */
 li.favItem {
   font-size: 0.7em;
@@ -205,6 +241,19 @@ li.favItem {
   margin-left: 0.5em;
   height: 1.5em;
   width: 5em;
+}
+
+/* Feedback na save button */
+h3 {
+  display: none;
+}
+
+.mystyle {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: var(--color-main);
+  font-size: 1em;
 }
 
 /* Responsive */
@@ -252,14 +301,24 @@ li.favItem {
   }
   ul.api {
     font-size: 2em;
+    display: inline-block;
+    width: 75%;
   }
   button.star img {
-    width: 9em;
+    display: none;
   }
   button.addToFaves {
     font-size: 2em;
   }
+  .mystyle {
+    width: 75%;
+  }
   section.favorieten {
-    transform: translateX(100%);
+		position: fixed !important;
+    width: 25%;
+    right: 25%;
+    top: 4.5em;
+    left: auto;
+    height: 100%;
   }
 }
