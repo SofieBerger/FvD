@@ -76,12 +76,12 @@ h1 {
 
 h1:hover {
   text-shadow: 
-    1px 1px 1px var(--color-3d-text),
-    1px 2px 1px var(--color-3d-text),
-    1px 3px 1px var(--color-3d-text),
-    1px 4px 1px var(--color-3d-text),
-    1px 5px 1px var(--color-3d-text),
-    1px 6px 1px var(--color-3d-text),
+    1px 1px  var(--color-3d-text),
+    1px 2px  var(--color-3d-text),
+    1px 3px  var(--color-3d-text),
+    1px 4px  var(--color-3d-text),
+    1px 5px  var(--color-3d-text),
+    1px 6px  var(--color-3d-text),
       1px 16px 6px var(--color-text-shadow),
       1px 18px 10px var(--color-text-shadow),
       1px 23px 35px var(--color-text-shadow),
@@ -143,6 +143,7 @@ button.toverstok:focus {
 button.toverstok > img{
   width: 9em;
   animation: animationToverstok 1s infinite linear alternate;
+  transform-origin: left bottom;
 }
 
 @keyframes animationToverstok {
@@ -158,14 +159,16 @@ button.toverstok > img{
 section.favorieten {
   position: fixed;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  height: 85%;
+  bottom:0;
+  right: 0;
   background-color: var(--color-menu-background);
   transform: translateY(100%);
   font-size: 2em;
   color: var(--color-main-text);
   text-align: center;
+
+  transition: 1s;
 }
 
 .favorieten {
@@ -173,8 +176,7 @@ section.favorieten {
 }
 
 section.favorieten.toonMenu {
-  transform: translateY(15%);
-  transition: 1s;
+  transform: translateY(0);
 }
 
 button.star {
@@ -270,10 +272,8 @@ h3 {
   button.addToFaves {
     font-size: 1.5em;
   }
-  section.favorieten.toonMenu {
-    transform: translateX(5%);
-    transform: translateY(20%);
-    transition: 1s;
+  section.favorieten {
+    height:67%;
   }
 }
 
@@ -314,11 +314,9 @@ h3 {
     width: 75%;
   }
   section.favorieten {
-		position: fixed !important;
+		position: fixed;
     width: 25%;
-    right: 25%;
-    top: 4.5em;
-    left: auto;
-    height: 100%;
+    height: calc(100% - 4.5em);
+    transform:none;
   }
 }

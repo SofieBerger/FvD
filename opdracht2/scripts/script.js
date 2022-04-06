@@ -12,9 +12,8 @@ const buttonToverstok = document.querySelector('button.toverstok');
 /********************************/
 function calcFavNum (){
 	const favAr = document.getElementsByClassName("favItem");
-		var numberFav = document.querySelector(".numberFav"); 
-		numberFav.innerHTML = favAr.length; //
-	
+	var numberFav = document.querySelector(".numberFav"); 
+	numberFav.innerHTML = favAr.length; //
 }
 
 /***********************/
@@ -22,6 +21,7 @@ function calcFavNum (){
 /***********************/
 function removeMe(event){
 	var deLi = event.target.closest("li"); //opzoek naar eerste li
+	console.log(event.target);
 	deLi.remove(); //verwijder de li
 
 	calcFavNum(); //function van de teller opnieuw uitvoeren
@@ -126,6 +126,10 @@ var options = {
 document.addEventListener("keydown", (e) => { //e is parameter voor keyboard event
 	if (e.code === "Enter") { //als code Enter wordt ingedrukt voer je getfacts function uit
 	  getFacts();
+	}
+	else if (e.code === "Escape") {
+		
+		menuOpenDicht();
 	}
   });
 
